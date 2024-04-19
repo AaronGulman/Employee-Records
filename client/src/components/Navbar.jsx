@@ -6,7 +6,7 @@ export default function Navbar(){
 		<div>
 			<nav className="flex justify-between items-center mb-6">
 				<NavLink>
-					<img alt="Aaron Gulman's Logo" className="h-10 inline" src="../assets/logo.png"></img>
+					<img alt="Aaron Gulman's Logo" className="h-10 inline" src="../../public/logo.png"></img>
 				</NavLink>
 
 				<NavLink className="
