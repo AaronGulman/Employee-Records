@@ -2,9 +2,9 @@ import express from "express";
 
 import db from "../db/connection.js";
 
-import { ObjectId } from "mongodb"; //mongdoDb method to convert a string into an objectId for the _id
+import { ObjectId } from "mongodb"; 
 
-const router = express.Router(); //an instance fof Express Router
+const router = express.Router(); 
 
 router.get("/", async (req, res) => {
   let collection = await db.collection("records");
@@ -66,7 +66,7 @@ router.delete("/:id", async (req, res) => {
   try {
     const query = { _id: new ObjectId(req.params.id) };
 
-    const collection = await collection("records");
+    const collection = await db.collection("records");
 
     let result = await collection.deleteOne(query);
 
@@ -78,3 +78,7 @@ router.delete("/:id", async (req, res) => {
 });
 
 export default router;
+
+
+//mongdoDb method to convert a string into an objectId for the _id
+//an instance of Express Router
