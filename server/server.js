@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("./record", records);
+app.use("/record", records);
 
 app.listen(PORT, ()=> {
 	console.log(`The server is running on port ${PORT}`)
